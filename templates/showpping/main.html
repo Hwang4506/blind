@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="background-image: url('https://res.cloudinary.com/dgb2e2npb/image/upload/v1616501051/BG05_gyg80l.jpg');
+      height: 100vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+<div style="position:relative; top:25%;">
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://res.cloudinary.com/dgb2e2npb/image/upload/v1616503077/01_Outsourcing_s21e2j.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">제조사/유통사/매장</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="{% url 'showpping:index' %}" class="btn btn-primary">제조사/유통사/매장</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://res.cloudinary.com/dgb2e2npb/image/upload/v1616503078/02_Production_k1esxq.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">비장애인유저</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="{% url 'showpping:ndlist' %}" class="btn btn-success">비장애인유저</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://res.cloudinary.com/dgb2e2npb/image/upload/v1616503078/03_Logistics_yhnuwd.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">장애인유저</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="{% url 'showpping:blmain' %}" class="btn btn-info">장애인유저</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+{% endblock %}

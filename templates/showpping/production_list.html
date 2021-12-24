@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-3">
+    <table class="table">
+        <thead>
+        <tr class="thead-dark">
+            <th>번호</th>
+            <th>대분류</th>
+            <th>중분류</th>
+            <th>제품명</th>
+            <th>가격</th>
+            <th>유통기한</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if production_list %}
+        {% for production in production_list %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ production.First_Class }}</td>
+            <td>{{ production.Second_Class }}</td>
+            <td>
+                <a href="{% url 'showpping:detail' production.id %}">{{ production.Product_Name }}</a>
+            </td>
+            <td>{{ production.Price }}</td>
+            <td>{{ production.Expiration_Date }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="3">목록이 없습니다.</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+     <a href="{% url 'showpping:product_create' %}" class="btn btn-primary">제품 등록</a>
+</div>
+{% endblock %}
