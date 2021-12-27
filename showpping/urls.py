@@ -28,6 +28,6 @@ urlpatterns = [
     path('nd/comment/modify/rinfo/<int:comment_id>/', views.comment_modify_rinfo, name='comment_modify_rinfo'),
     path('nd/comment/delete/rinfo/<int:comment_id>/', views.comment_delete_rinfo, name='comment_delete_rinfo'),
     path('nd/vote/review/<int:review_id>/', views.vote_review, name='vote_review'),
-    path('product_rest_gen', views.produc_rest_gen.as_view(), name='rest_gen'),
-    path('product_rest_func', views.produc_rest_func, name='rest_func'),
+    path('product_rest_gen/', views.produc_rest_gen.as_view(), name='rest_gen'),
+    path('product_rest_func/', views.produc_rest_func, name='rest_func'),
 ]
