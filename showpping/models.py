@@ -16,6 +16,7 @@ class Product_info(models.Model):
     First_Class = models.CharField(max_length=5, choices=FIRST_CLASS_CHOICES, null=True, blank=True)
     Second_Class = models.CharField(max_length=50, null=True, blank=True)
     Product_Name = models.CharField(max_length=50, null=True, blank=True)
+    Manufacturer = models.CharField(max_length=50, null=True, blank=True)
     Price = models.IntegerField(default=0, null=True, blank=True)
     Expiration_Date = models.DateField(null=True, blank=True)
     Basic_Information = models.CharField(max_length=200, null=True, blank=True)

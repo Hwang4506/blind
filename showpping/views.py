@@ -362,7 +362,7 @@ class produc_rest_gen(generics.ListCreateAPIView):
     queryset = Product_info.objects.all()
     serializer_class = ProductinfoSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('First_Class', 'Second_Class', 'Product_Name', 'Price',
+    filter_fields = ('First_Class', 'Second_Class', 'Product_Name', 'Manufacturer', 'Price',
                     'Expiration_Date', 'Basic_Information',
                     'Notice', 'Additional_Information', 'barcode_number'
                     )
